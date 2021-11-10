@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pinterest Clone</title>
+</head>
+<body>
+
+<h1>Create Pin</h1>
+
+{{ form_start(monFormulaire) }}
+    {{ form_widget(monFormulaire) }} {# représente les champs du formulaire déjà entrés #}
+
+    <input type="submit" value="Create Pin">
+{{ form_end(monFormulaire) }}
+
+
+</body>
+</html>
+
+{#
+ANCIEN FORMULAIRE
+<form method="POST">
+    <input type="hidden" name="_token" value="{{ csrf_token('pins.create')}}">
+    <div>
+        <label for="title"> Title </label><br>
+        <input type="text" id="title" name="title">
+    </div>
+
+    <div>
+        <label for="description"> Description </label><br>
+        <textarea id="description" rows="5" cols="60" name="description"></textarea>
+    </div>
+
+    <input type="submit" value="Create Pin">
+
+</form>
+#}
